@@ -18,7 +18,7 @@
 
 CRGB leds[NUM_LEDS];
 
-const int brightnessInPin = A1;
+const int brightnessInPin = A1;  //pot stuff
 
 void setup() {
   delay(3000); // 3 second delay for recovery
@@ -35,8 +35,8 @@ void setup() {
 void loop()
 {
 
-  int mappedValue = map(analogRead(brightnessInPin), 0, 1023, 255, 0); 
-  FastLED.setBrightness(constrain(mappedValue, MIN_BRIGHTNESS, MAX_BRIGHTNESS));
+  int mappedValue = map(analogRead(brightnessInPin), 0, 1023, 255, 0);             //pot stuff
+  FastLED.setBrightness(constrain(mappedValue, MIN_BRIGHTNESS, MAX_BRIGHTNESS));   //pot stuff
 
   
   pride();
